@@ -4,13 +4,15 @@ A single-page Netflix clone built using React. This project aims to replicate th
 
 ## Table of Contents
 
-- [Demo](#demo)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+- [Netflix Clone](#netflix-clone)
+  - [Table of Contents](#table-of-contents)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+  - [Usage](#usage)
+  - [Technologies Used](#technologies-used)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Demo
 
@@ -32,18 +34,18 @@ To get a local copy of this project up and running, follow these steps:
    git clone https://github.com/AJITHANAND/Netflix-Clone.git
    ```
 2.  **Navigate to the project directory:**
-   ```bash
-   cd netflix-clone
-   ```
+      ```bash
+      cd netflix-clone
+      ```
 3. **Install dependencies:**
    ```bash
    npm install
    ```
 4. **Environment:**
 To run this project, you will need to add the following environment variables to your .env file
-```bash
-REACT_APP_API_KEY=`API_KEY`
-```
+   ```bash
+   REACT_APP_API_KEY=`API_KEY`
+   ```
 4. **Start the development server:**
    ```bash
    npm start
