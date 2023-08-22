@@ -7,6 +7,3 @@ export const comedy = 'discover/movie?with_genres=35&api_key='
 export const horror = 'discover/movie?with_genres=27&api_key='
 export const documentary = 'discover/movie?with_genres=99&api_key='
 export const video = (id,api_key)=> `movie/${id}/videos?api_key=${api_key}`
-
-
-console.log(video(1,API_KEY));

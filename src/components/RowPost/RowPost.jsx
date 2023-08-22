@@ -34,7 +34,8 @@ function RowPost(props) {
     width: "100%",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
+      autoplay: 1,
+      rel:0, // no related item 
     },
   };
 
@@ -43,16 +44,18 @@ function RowPost(props) {
       <h2>{props.title}</h2>
       <div className="posters">
         {movie.map((obj, index) => (
+          obj.backdrop_path &&
           <img
+            key={index}
             onClick={(e) => playTrailer(e.target.id)}
             className={props.isSmall ? "smallPoster" : "poster"}
             id={obj.id}
-            src={`${IMAGE_URL + obj.backdrop_path}`}
+            src={`${IMAGE_URL + obj.poster_path}`}
             alt="poster"
           />
         ))}
       </div>
-      {id && <YouTube videoId={id} opts={opts} />}
+      {id && <YouTube videoId={id} onPause={() => setID("")} onEnd={() => setID("")} onError={() => setID("")} opts={opts} />}
     </div>
   );
 }
