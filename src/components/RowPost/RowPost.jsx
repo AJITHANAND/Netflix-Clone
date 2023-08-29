@@ -20,13 +20,23 @@ function RowPost(props) {
     // console.log(url);
     axios.get(`${video(id, API_KEY)}`).then((res) => {
       // window.location.href = `https://www.youtube.com/watch?v=${key}`;
-      console.log(res.data.results);
+      const data = res.data.results;
+      console.log(data);
+      const nameRegex = /Official Trailer/gi;
       if (res.data.results.length !== 0) {
-        setID(res.data.results[0].key);
-      }else{
-        alert('trailer not available');
+        const ytId = data.filter((obj) => obj.type === "Trailer" || nameRegex.test(obj.name));
+        // console.log("official trailer ")
+        // console.log(ytId[0].key);
+        console.log(ytId);
+        if (ytId.length > 0) {
+          setID(ytId[0].key);
+        } else {
+          setID(res.data.results[0].key);
+        }
+      } else {
+        alert("Sorry for the inconvenience,Unable to find the Trailer");
       }
-    });
+    }).catch((err) => alert("Sorry for the inconvenience,Trailer information not available"));
   };
 
   const opts = {
