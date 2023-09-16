@@ -75,6 +75,10 @@ Contributions are welcome! If you find a bug or have suggestions for improvement
 - Push the branch: git push origin feature/your-feature-name
 - Open a pull request.
 
+
+## Acknowledgments
+> - Special thanks to the ***NETFLIX,TMDb*** team for the inspiration.
+
 ## License
 
 This project is licensed under the MIT License.
